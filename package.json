@@ -1,0 +1,24 @@
+{
+  "name": "figma-console-shared",
+  "version": "0.1.0",
+  "description": "Run one figma-console-mcp instance and share it with many MCP clients over Streamable HTTP on localhost.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Mikhail Nezhinsky",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nezhinskiy/figma-console-shared.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bridge.mjs",
+    "selftest": "node selftest.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "figma-console-mcp": "1.40.9"
+  }
+}

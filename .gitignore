@@ -1,0 +1,14 @@
+# secrets
+token
+*.token
+.env
+
+# dependencies
+node_modules/
+
+# logs
+*.log
+logs/
+
+# OS
+.DS_Store

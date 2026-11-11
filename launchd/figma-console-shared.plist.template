@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template: install.sh fills in the {{PLACEHOLDERS}} and writes the result to ~/Library/LaunchAgents. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>{{LABEL}}</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>{{NODE}}</string>
+    <string>{{INSTALL_DIR}}/bridge.mjs</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>{{INSTALL_DIR}}</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>{{PATH}}</string>
+    <key>FIGMA_SHARED_PORT</key>
+    <string>{{PORT}}</string>
+    <key>FIGMA_SHARED_TOKEN_FILE</key>
+    <string>{{TOKEN_FILE}}</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>{{LOG_FILE}}</string>
+  <key>StandardErrorPath</key>
+  <string>{{LOG_FILE}}</string>
+</dict>
+</plist>
