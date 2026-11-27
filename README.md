@@ -26,7 +26,7 @@ figma-console-mcp is a stdio MCP server: every MCP client that has it configured
 ## Requirements
 
 - macOS for the bundled launchd service (the bridge itself is plain Node.js and runs anywhere; use your own supervisor elsewhere).
-- Node.js 18 or newer.
+- Node.js 20.19 or newer on the 20 line, 22.13 or newer on the 22 line, or 24 and later. The locked dependencies require it (`jsdom`, pulled in by figma-console-mcp, declares `^20.19.0 || ^22.13.0 || >=24.0.0`).
 - Figma Desktop with the figma-console-mcp **Desktop Bridge** plugin (see the [figma-console-mcp docs](https://github.com/southleft/figma-console-mcp)).
 - Optional: a Figma personal access token for the REST-API tools.
 

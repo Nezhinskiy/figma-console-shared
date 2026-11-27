@@ -31,7 +31,7 @@ LOG_FILE="$HOME/Library/Logs/figma-console-shared.log"
 
 NODE="${NODE:-$(command -v node || true)}"
 if [ -z "$NODE" ] || [ ! -x "$NODE" ]; then
-  echo "node not found on PATH (Node.js 18+ is required); set NODE=/path/to/node to override." >&2
+  echo "node not found on PATH (Node.js ^20.19, ^22.13 or >=24 is required); set NODE=/path/to/node to override." >&2
   exit 1
 fi
 NODE="$(cd "$(dirname "$NODE")" && pwd -P)/$(basename "$NODE")"
